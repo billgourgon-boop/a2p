@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artist Flooring and Showers LLC — premium flooring and shower installation across Florida. Get your free estimate today.">
+<title>Artist Flooring and Showers — Save Money on New Floors in Florida</title>
+<style>
+  :root {
+    --black: #0b0b0b;
+    --gold: #d4af37;
+    --gold-light: #e8c668;
+    --gold-dark: #a8861f;
+    --white: #ffffff;
+    --gray: #f6f6f6;
+    --gray-dark: #2a2a2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--gold-dark); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HEADER / LOGO */
+  .top-bar {
+    background: var(--white);
+    padding: 24px 20px 18px;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+  .top-bar img.logo {
+    max-height: 180px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80') center/cover no-repeat;
+    color: var(--white);
+    padding: 80px 20px 60px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 .accent { color: var(--gold); }
+  .hero .sub {
+    font-size: clamp(16px, 2vw, 20px);
+    max-width: 720px;
+    margin: 0 auto 14px;
+    color: #eaeaea;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 18px;
+  }
+
+  /* FORM SECTION */
+  .form-wrap {
+    background: var(--gray);
+    padding: 60px 20px;
+  }
+  .form-card {
+    max-width: 620px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    padding: 40px 32px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  }
+  .form-card h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 6px;
+    color: var(--black);
+  }
+  .form-card .form-sub {
+    text-align: center;
+    color: #555;
+    margin-bottom: 26px;
+    font-size: 15px;
+  }
+  .form-row { margin-bottom: 16px; }
+  .form-row label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .form-row input[type="text"],
+  .form-row input[type="tel"],
+  .form-row input[type="email"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    background: var(--white);
+    transition: border-color 0.15s ease;
+  }
+  .form-row input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+  }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 480px) { .row-2 { grid-template-columns: 1fr; } }
+
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 14px 0;
+    padding: 10px;
+    background: #fafafa;
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+  }
+  .checkbox-row input[type="checkbox"] {
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--gold-dark);
+  }
+  .checkbox-row label {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 16px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  .submit-btn:hover { background: var(--gold-light); }
+  .submit-btn:active { transform: translateY(1px); }
+
+  .form-legal {
+    text-align: center;
+    font-size: 11px;
+    color: #777;
+    margin-top: 16px;
+  }
+  .form-legal a { color: var(--gold-dark); }
+
+  /* SECTION SHARED */
+  .section { padding: 70px 20px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section h2 {
+    text-align: center;
+    font-size: clamp(26px, 3.5vw, 38px);
+    margin-bottom: 12px;
+    color: var(--black);
+  }
+  .section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 14px auto 0;
+  }
+  .section .lead {
+    text-align: center;
+    color: #555;
+    max-width: 720px;
+    margin: 0 auto 40px;
+    font-size: 17px;
+  }
+
+  /* REVIEWS */
+  .reviews { background: var(--white); }
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .review-card {
+    background: var(--gray);
+    border-top: 4px solid var(--gold);
+    padding: 26px;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+  .stars { color: var(--gold); font-size: 18px; margin-bottom: 8px; letter-spacing: 2px; }
+  .review-text { font-style: italic; color: #333; margin-bottom: 14px; }
+  .reviewer { font-weight: 700; color: var(--black); font-size: 14px; }
+  .reviewer span { color: #777; font-weight: 400; font-size: 13px; }
+
+  /* HOW IT WORKS */
+  .how { background: var(--black); color: var(--white); }
+  .how h2 { color: var(--white); }
+  .how .lead { color: #c8c8c8; }
+  .step-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+  }
+  .step {
+    text-align: center;
+    padding: 20px;
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--gold);
+    color: var(--black);
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  .step h3 { font-size: 20px; margin-bottom: 8px; color: var(--gold); }
+  .step p { color: #d6d6d6; font-size: 15px; }
+
+  /* ABOUT */
+  .about { background: var(--gray); }
+  .about-content {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+    font-size: 17px;
+  }
+  .about-content p { margin-bottom: 16px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    color: #c8c8c8;
+    padding: 40px 20px 24px;
+    text-align: center;
+    border-top: 3px solid var(--gold);
+  }
+  footer .footer-brand {
+    color: var(--gold);
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  footer .footer-links {
+    margin: 14px 0;
+  }
+  footer .footer-links a {
+    color: var(--gold);
+    margin: 0 12px;
+    font-size: 14px;
+  }
+  footer .footer-links a:hover { color: var(--gold-light); }
+  footer .copy {
+    font-size: 12px;
+    color: #888;
+    margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+
+<header class="top-bar">
+  <img src="logo.png" alt="Artist Flooring and Showers" class="logo">
+</header>
+
+<section class="hero">
+  <h1>Save Money. <span class="accent">New Floors</span> in Florida Today.</h1>
+  <p class="sub">Premium flooring and shower installation backed by craftsmanship you can see and a price that won't break the bank. Free estimates, fast turnaround, no pressure.</p>
+  <span class="badge">Florida Licensed &amp; Insured</span>
+</section>
+
+<section class="form-wrap" id="estimate">
+  <div class="form-card">
+    <h2>Get Your Free Estimate</h2>
+    <p class="form-sub">Tell us a little about your project &mdash; we&rsquo;ll get back to you within one business day.</p>
+    <form action="thank-you.html" method="get" novalidate>
+      <div class="row-2">
+        <div class="form-row">
+          <label for="first">First Name</label>
+          <input type="text" id="first" name="first" autocomplete="given-name">
+        </div>
+        <div class="form-row">
+          <label for="last">Last Name</label>
+          <input type="text" id="last" name="last" autocomplete="family-name">
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="form-row">
+        <label for="email">Email <span style="color:var(--gold-dark);">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="consent1" name="consent_nonmarketing">
+        <label for="consent1">I consent to receive non-marketing text messages from Artist Flooring and Showers about appointment reminders, follow ups, informational SMS and Account notifications. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="consent2" name="consent_marketing">
+        <label for="consent2">I consent to receive marketing text messages from Artist Flooring and Showers about special offers, discounts, new product updates at the phone number provided. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Get Estimate</button>
+
+      <p class="form-legal">
+        By submitting this form you agree to our
+        <a href="privacy-policy.html">Privacy Policy</a> and
+        <a href="terms-of-service.html">Terms of Service</a>.
+      </p>
+    </form>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="container">
+    <h2>What Florida Homeowners Are Saying</h2>
+    <p class="lead">Real reviews from real customers across the Sunshine State.</p>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;The crew showed up on time, finished a day early, and the master bath shower looks like something out of a magazine. Worth every penny.&rdquo;</p>
+        <p class="reviewer">Marisol T. <span>&mdash; Tampa, FL</span></p>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Got three quotes for new floors throughout the house. Artist Flooring beat them all and the LVP install is rock solid. Already recommended them to my sister.&rdquo;</p>
+        <p class="reviewer">David R. <span>&mdash; Orlando, FL</span></p>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Honest, clean, and fast. They walked me through every option without trying to upsell me. The tile work in our kitchen is flawless.&rdquo;</p>
+        <p class="reviewer">Jennifer K. <span>&mdash; Naples, FL</span></p>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;After the storm we needed our floors redone fast. They were the only company that actually called me back the same day. Saved our house.&rdquo;</p>
+        <p class="reviewer">Carlos M. <span>&mdash; Fort Lauderdale, FL</span></p>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Quoted me less than the big-box installers and the quality is twice as good. The walk-in shower they built for my mother-in-law is gorgeous and ADA-friendly.&rdquo;</p>
+        <p class="reviewer">Patricia L. <span>&mdash; Sarasota, FL</span></p>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Professional from the first phone call to the final walk-through. They cleaned up daily and left the house spotless. Highly recommend.&rdquo;</p>
+        <p class="reviewer">Brian H. <span>&mdash; Jacksonville, FL</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section how">
+  <div class="container">
+    <h2>How It Works</h2>
+    <p class="lead">A simple, transparent process from quote to completion.</p>
+    <div class="step-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Request</h3>
+        <p>Fill out the form above with your contact info and a few details about your project.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Consult</h3>
+        <p>We reach out to schedule a free in-home or virtual consultation at your convenience.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Estimate</h3>
+        <p>You receive a clear, written estimate &mdash; no hidden fees, no high-pressure tactics.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Install</h3>
+        <p>Our licensed crew installs your new floors or shower with care, on schedule, and on budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about">
+  <div class="container">
+    <h2>About Artist Flooring and Showers</h2>
+    <div class="about-content">
+      <p>Artist Flooring and Showers LLC is a Florida-based home improvement company specializing in premium flooring and bathroom shower installations. We&rsquo;re proud to serve homeowners across the state with the same level of craftsmanship, honesty, and care we&rsquo;d give to our own families.</p>
+      <p>From luxury vinyl plank and tile to walk-in showers and full bathroom remodels, every project is handled by our trained, licensed, and insured installers. We believe a beautiful home shouldn&rsquo;t come with surprise costs &mdash; just clean work, clear communication, and floors you&rsquo;ll be proud of for years to come.</p>
+      <p><strong>Licensed. Insured. Florida-Owned.</strong></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Artist Flooring and Showers LLC</div>
+  <div>Serving homeowners across Florida</div>
+  <div style="margin-top:10px; font-size:14px;">
+    Phone: <a href="tel:+17276022233" style="color:var(--gold); text-decoration:none;">+1 (727) 602-2233</a>
+    &nbsp;&middot;&nbsp;
+    Email: <a href="mailto:kotrocip@gmail.com" style="color:var(--gold); text-decoration:none;">kotrocip@gmail.com</a>
+  </div>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+  </div>
+  <div class="copy">&copy; 2026 Artist Flooring and Showers LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

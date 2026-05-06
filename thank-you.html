@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Artist Flooring and Showers</title>
+<style>
+  :root {
+    --black: #0b0b0b;
+    --gold: #d4af37;
+    --gold-light: #e8c668;
+    --gold-dark: #a8861f;
+    --white: #ffffff;
+    --gray: #f6f6f6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--gold-dark); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .top-bar {
+    background: var(--white);
+    padding: 24px 20px 18px;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+  .top-bar img.logo {
+    max-height: 180px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: var(--gray);
+  }
+  .card {
+    max-width: 640px;
+    background: var(--white);
+    border: 2px solid var(--black);
+    border-top: 8px solid var(--gold);
+    border-radius: 10px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  }
+  .check {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--black);
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 800;
+  }
+  h1 {
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 14px;
+    color: var(--black);
+  }
+  h1 span { color: var(--gold-dark); }
+  .lead {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 28px;
+  }
+  .next-steps {
+    text-align: left;
+    background: #fafafa;
+    border-left: 4px solid var(--gold);
+    padding: 18px 20px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+  .next-steps h3 {
+    font-size: 16px;
+    color: var(--black);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .next-steps ul {
+    list-style: none;
+    padding: 0;
+  }
+  .next-steps li {
+    padding: 6px 0 6px 26px;
+    position: relative;
+    font-size: 15px;
+    color: #333;
+  }
+  .next-steps li::before {
+    content: '\2714';
+    color: var(--gold-dark);
+    position: absolute;
+    left: 0;
+    font-weight: 800;
+  }
+  .small {
+    font-size: 13px;
+    color: #777;
+    margin-top: 18px;
+  }
+
+  footer {
+    background: var(--black);
+    color: #c8c8c8;
+    padding: 30px 20px 22px;
+    text-align: center;
+    border-top: 3px solid var(--gold);
+  }
+  footer .footer-brand {
+    color: var(--gold);
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  footer .footer-links a {
+    color: var(--gold);
+    margin: 0 12px;
+    font-size: 14px;
+  }
+  footer .footer-links a:hover { color: var(--gold-light); }
+  footer .copy {
+    font-size: 12px;
+    color: #888;
+    margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+
+<header class="top-bar">
+  <img src="logo.png" alt="Artist Flooring and Showers" class="logo">
+</header>
+
+<main>
+  <div class="card">
+    <div class="check">&#10003;</div>
+    <h1>Thank You! <span>We Got Your Request.</span></h1>
+    <p class="lead">Your free estimate request has been received. A member of our team will reach out within one business day to schedule your consultation.</p>
+
+    <div class="next-steps">
+      <h3>What Happens Next</h3>
+      <ul>
+        <li>We&rsquo;ll review your request and prepare a few quick questions about your project.</li>
+        <li>You&rsquo;ll receive a call or email from our team within 1 business day.</li>
+        <li>We&rsquo;ll schedule a free in-home or virtual consultation at a time that works for you.</li>
+        <li>You&rsquo;ll receive a clear, written estimate &mdash; no pressure, no hidden fees.</li>
+      </ul>
+    </div>
+
+    <p class="small">If you provided a phone number and consented to text messaging, you may receive an SMS confirmation shortly. Reply <strong>STOP</strong> at any time to opt out, or <strong>HELP</strong> for assistance.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-brand">Artist Flooring and Showers LLC</div>
+  <div>Serving homeowners across Florida</div>
+  <div style="margin-top:10px; font-size:14px;">
+    Phone: <a href="tel:+17276022233" style="color:var(--gold); text-decoration:none;">+1 (727) 602-2233</a>
+    &nbsp;&middot;&nbsp;
+    Email: <a href="mailto:kotrocip@gmail.com" style="color:var(--gold); text-decoration:none;">kotrocip@gmail.com</a>
+  </div>
+  <div class="footer-links" style="margin: 14px 0;">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+  </div>
+  <div class="copy">&copy; 2026 Artist Flooring and Showers LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
