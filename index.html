@@ -31,14 +31,29 @@
   /* HEADER / LOGO */
   .top-bar {
     background: var(--white);
-    padding: 24px 20px 18px;
+    padding: 24px 20px 22px;
     text-align: center;
     border-bottom: 4px solid var(--gold);
   }
   .top-bar img.logo {
     max-height: 180px;
     width: auto;
-    margin: 0 auto;
+    margin: 0 auto 6px;
+  }
+  .brand-name {
+    color: var(--black);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: clamp(20px, 2.6vw, 28px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+  .brand-name span {
+    color: var(--gold-dark);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 2px;
   }
 
   /* HERO */
@@ -302,6 +317,7 @@
 
 <header class="top-bar">
   <img src="logo.png" alt="Artist Flooring and Showers" class="logo">
+  <div class="brand-name">Artist Flooring <span>and</span> Showers</div>
 </header>
 
 <section class="hero">
