@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist Flooring and Showers LLC — premium flooring and shower installation across Florida. Get your free estimate today.">
-<title>Artist Flooring and Showers — Save Money on New Floors in Florida</title>
+<meta name="description" content="Artist Flooring and Showers LLC — premium flooring and shower installation across Florida. Florida licensed and insured.">
+<title>Artist Flooring and Showers — Florida Flooring &amp; Shower Installation</title>
 <style>
   :root {
     --black: #0b0b0b;
@@ -30,6 +30,7 @@
 
   /* HEADER / LOGO */
   .top-bar {
+    position: relative;
     background: var(--white);
     padding: 24px 20px 22px;
     text-align: center;
@@ -56,12 +57,83 @@
     letter-spacing: 2px;
   }
 
+  /* MENU BUTTON */
+  .menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background: var(--black);
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 100;
+    transition: background 0.15s ease;
+    padding: 0;
+  }
+  .menu-btn:hover { background: var(--gold-dark); }
+  .menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--gold);
+    transition: transform 0.25s ease, opacity 0.2s ease, background 0.15s ease;
+  }
+  .menu-btn:hover span { background: var(--white); }
+  .menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-btn.open span:nth-child(2) { opacity: 0; }
+  .menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .menu-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 16px;
+    background: var(--black);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 220px;
+    box-shadow: 0 14px 36px rgba(0,0,0,0.3);
+    z-index: 99;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .menu-panel.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .menu-panel a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 11px 24px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .menu-panel a:hover {
+    background: var(--gold);
+    color: var(--black);
+    text-decoration: none;
+  }
+
   /* HERO */
   .hero {
     background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
                 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80') center/cover no-repeat;
     color: var(--white);
-    padding: 80px 20px 60px;
+    padding: 80px 20px 70px;
     text-align: center;
   }
   .hero h1 {
@@ -90,112 +162,52 @@
     text-transform: uppercase;
     margin-top: 18px;
   }
-
-  /* FORM SECTION */
-  .form-wrap {
-    background: var(--gray);
-    padding: 60px 20px;
-  }
-  .form-card {
-    max-width: 620px;
-    margin: 0 auto;
-    background: var(--white);
-    border: 2px solid var(--black);
-    border-radius: 8px;
-    padding: 40px 32px;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-  }
-  .form-card h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 6px;
-    color: var(--black);
-  }
-  .form-card .form-sub {
-    text-align: center;
-    color: #555;
-    margin-bottom: 26px;
-    font-size: 15px;
-  }
-  .form-row { margin-bottom: 16px; }
-  .form-row label {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: var(--black);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .form-row input[type="text"],
-  .form-row input[type="tel"],
-  .form-row input[type="email"] {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    font-family: inherit;
-    background: var(--white);
-    transition: border-color 0.15s ease;
-  }
-  .form-row input:focus {
-    outline: none;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
-  }
-  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  @media (max-width: 480px) { .row-2 { grid-template-columns: 1fr; } }
-
-  .checkbox-row {
+  .cta-row {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 14px 0;
-    padding: 10px;
-    background: #fafafa;
-    border-left: 3px solid var(--gold);
-    border-radius: 4px;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
   }
-  .checkbox-row input[type="checkbox"] {
-    margin-top: 4px;
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    accent-color: var(--gold-dark);
-  }
-  .checkbox-row label {
-    font-size: 12px;
-    line-height: 1.5;
-    color: #333;
-    cursor: pointer;
-  }
-
-  .submit-btn {
-    width: 100%;
+  .btn-primary {
+    display: inline-block;
     background: var(--gold);
     color: var(--black);
-    border: none;
-    padding: 16px;
-    border-radius: 6px;
-    font-size: 18px;
+    padding: 14px 30px;
+    font-size: 16px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    cursor: pointer;
-    margin-top: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 2px solid var(--gold);
     transition: background 0.15s ease, transform 0.1s ease;
   }
-  .submit-btn:hover { background: var(--gold-light); }
-  .submit-btn:active { transform: translateY(1px); }
-
-  .form-legal {
-    text-align: center;
-    font-size: 11px;
-    color: #777;
-    margin-top: 16px;
+  .btn-primary:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    text-decoration: none;
+    color: var(--black);
   }
-  .form-legal a { color: var(--gold-dark); }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 2px solid var(--white);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .btn-secondary:hover {
+    background: var(--white);
+    color: var(--black);
+    text-decoration: none;
+  }
 
   /* SECTION SHARED */
   .section { padding: 70px 20px; }
@@ -220,6 +232,45 @@
     max-width: 720px;
     margin: 0 auto 40px;
     font-size: 17px;
+  }
+
+  /* SERVICES */
+  .services { background: var(--gray); }
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--white);
+    border: 2px solid var(--black);
+    border-top: 6px solid var(--gold);
+    padding: 30px 26px;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  }
+  .service-num {
+    display: inline-block;
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--gold-dark);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    color: var(--black);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .service-card p {
+    color: #555;
+    font-size: 15px;
   }
 
   /* REVIEWS */
@@ -316,62 +367,72 @@
 <body>
 
 <header class="top-bar">
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="menu-panel" id="menuPanel" aria-label="Main navigation">
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
   <img src="logo.png" alt="Artist Flooring and Showers" class="logo">
   <div class="brand-name">Artist Flooring <span>and</span> Showers</div>
 </header>
 
 <section class="hero">
   <h1>Save Money. <span class="accent">New Floors</span> in Florida Today.</h1>
-  <p class="sub">Premium flooring and shower installation backed by craftsmanship you can see and a price that won't break the bank. Free estimates, fast turnaround, no pressure.</p>
+  <p class="sub">Premium flooring and shower installation backed by craftsmanship you can see and a price that won&rsquo;t break the bank. Free estimates, fast turnaround, no pressure.</p>
   <span class="badge">Florida Licensed &amp; Insured</span>
-</section>
-
-<section class="form-wrap" id="estimate">
-  <div class="form-card">
-    <h2>Get Your Free Estimate</h2>
-    <p class="form-sub">Tell us a little about your project &mdash; we&rsquo;ll get back to you within one business day.</p>
-    <form action="thank-you.html" method="get" novalidate>
-      <div class="row-2">
-        <div class="form-row">
-          <label for="first">First Name</label>
-          <input type="text" id="first" name="first" autocomplete="given-name">
-        </div>
-        <div class="form-row">
-          <label for="last">Last Name</label>
-          <input type="text" id="last" name="last" autocomplete="family-name">
-        </div>
-      </div>
-      <div class="form-row">
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel">
-      </div>
-      <div class="form-row">
-        <label for="email">Email <span style="color:var(--gold-dark);">*</span></label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
-      </div>
-
-      <div class="checkbox-row">
-        <input type="checkbox" id="consent1" name="consent_nonmarketing">
-        <label for="consent1">I consent to receive non-marketing text messages from Artist Flooring and Showers about appointment reminders, follow ups, informational SMS and Account notifications. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
-      </div>
-
-      <div class="checkbox-row">
-        <input type="checkbox" id="consent2" name="consent_marketing">
-        <label for="consent2">I consent to receive marketing text messages from Artist Flooring and Showers about special offers, discounts, new product updates at the phone number provided. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
-      </div>
-
-      <button type="submit" class="submit-btn">Get Estimate</button>
-
-      <p class="form-legal">
-        By submitting this form you agree to our
-        <a href="privacy-policy.html">Privacy Policy</a> and
-        <a href="terms-of-service.html">Terms of Service</a>.
-      </p>
-    </form>
+  <div class="cta-row">
+    <a href="tel:+17276022233" class="btn-primary">Call (727) 602-2233</a>
+    <a href="#services" class="btn-secondary">View Our Services</a>
   </div>
 </section>
 
-<section class="section reviews">
+<section class="section services" id="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p class="lead">From new floors to walk-in showers, we handle every step in-house &mdash; licensed, insured, and Florida-proud.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Luxury Vinyl Plank Flooring</h3>
+        <p>Waterproof, scratch-resistant LVP that handles Florida humidity, kids, pets, and beach sand without breaking a sweat.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Tile &amp; Stone Flooring</h3>
+        <p>Porcelain, ceramic, and natural stone installed with precision &mdash; clean grout lines, level surfaces, and finishes that last decades.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Hardwood Flooring</h3>
+        <p>Engineered and solid hardwood floors installed and refinished by craftsmen who treat every plank like it matters &mdash; because it does.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Walk-In Showers</h3>
+        <p>Modern, low-threshold walk-in showers built for safety, accessibility, and timeless style &mdash; perfect for aging-in-place upgrades.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>Custom Tile Showers</h3>
+        <p>Floor-to-ceiling tile showers with niches, benches, glass enclosures, and waterproofing that&rsquo;s done right the first time.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3>Bathroom Remodels</h3>
+        <p>Full bathroom transformations &mdash; vanities, fixtures, lighting, flooring, and showers &mdash; handled by one trusted team start to finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
   <div class="container">
     <h2>What Florida Homeowners Are Saying</h2>
     <p class="lead">Real reviews from real customers across the Sunshine State.</p>
@@ -410,20 +471,20 @@
   </div>
 </section>
 
-<section class="section how">
+<section class="section how" id="how-it-works">
   <div class="container">
     <h2>How It Works</h2>
-    <p class="lead">A simple, transparent process from quote to completion.</p>
+    <p class="lead">A simple, transparent process from first call to completed install.</p>
     <div class="step-grid">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Request</h3>
-        <p>Fill out the form above with your contact info and a few details about your project.</p>
+        <h3>Reach Out</h3>
+        <p>Call us at (727) 602-2233 or chat with us using the icon in the bottom corner of this page.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <h3>Consult</h3>
-        <p>We reach out to schedule a free in-home or virtual consultation at your convenience.</p>
+        <p>We schedule a free in-home or virtual consultation at a time that works for you.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
@@ -439,7 +500,7 @@
   </div>
 </section>
 
-<section class="section about">
+<section class="section about" id="about">
   <div class="container">
     <h2>About Artist Flooring and Showers</h2>
     <div class="about-content">
@@ -450,7 +511,7 @@
   </div>
 </section>
 
-<footer>
+<footer id="contact">
   <div class="footer-brand">Artist Flooring and Showers LLC</div>
   <div>Serving homeowners across Florida</div>
   <div style="margin-top:10px; font-size:14px;">
@@ -464,6 +525,33 @@
   </div>
   <div class="copy">&copy; 2026 Artist Flooring and Showers LLC. All rights reserved.</div>
 </footer>
+
+<script>
+  (function() {
+    var btn = document.getElementById('menuBtn');
+    var panel = document.getElementById('menuPanel');
+    function close() {
+      btn.classList.remove('open');
+      panel.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = btn.classList.toggle('open');
+      panel.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') close();
+    });
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target) && !panel.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') close();
+    });
+  })();
+</script>
 
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69fb8248cb443e6505960d4a" data-source="WEB_USER"></script>
 
