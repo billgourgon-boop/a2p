@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist Flooring and Showers LLC — premium flooring and shower installation across Florida. Florida licensed and insured.">
-<title>Artist Flooring and Showers — Florida Flooring &amp; Shower Installation</title>
+<meta name="description" content="MVP Interior Group LLC — premium flooring installation across Wisconsin. Licensed and insured.">
+<title>MVP Interior Group LLC — Wisconsin Flooring Installation</title>
 <style>
   :root {
-    --black: #0b0b0b;
-    --gold: #d4af37;
-    --gold-light: #e8c668;
-    --gold-dark: #a8861f;
+    --navy: #0a2540;
+    --blue: #2563eb;
+    --blue-light: #60a5fa;
+    --blue-dark: #1e40af;
     --white: #ffffff;
     --gray: #f6f6f6;
-    --gray-dark: #2a2a2a;
+    --slate: #1e293b;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: var(--white);
-    color: var(--black);
+    color: var(--navy);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
   img { max-width: 100%; height: auto; display: block; }
-  a { color: var(--gold-dark); text-decoration: none; }
+  a { color: var(--blue-dark); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
   /* HEADER / LOGO */
@@ -34,7 +34,7 @@
     background: var(--white);
     padding: 24px 20px 22px;
     text-align: center;
-    border-bottom: 4px solid var(--gold);
+    border-bottom: 4px solid var(--blue);
   }
   .top-bar img.logo {
     max-height: 180px;
@@ -42,7 +42,7 @@
     margin: 0 auto 6px;
   }
   .brand-name {
-    color: var(--black);
+    color: var(--navy);
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: clamp(20px, 2.6vw, 28px);
     letter-spacing: 4px;
@@ -51,7 +51,7 @@
     margin-top: 4px;
   }
   .brand-name span {
-    color: var(--gold-dark);
+    color: var(--blue);
     font-style: italic;
     font-weight: 400;
     letter-spacing: 2px;
@@ -64,8 +64,8 @@
     right: 20px;
     width: 48px;
     height: 48px;
-    background: var(--black);
-    border: 2px solid var(--gold);
+    background: var(--navy);
+    border: 2px solid var(--blue);
     border-radius: 6px;
     cursor: pointer;
     display: flex;
@@ -77,12 +77,12 @@
     transition: background 0.15s ease;
     padding: 0;
   }
-  .menu-btn:hover { background: var(--gold-dark); }
+  .menu-btn:hover { background: var(--blue-dark); }
   .menu-btn span {
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--gold);
+    background: var(--blue-light);
     transition: transform 0.25s ease, opacity 0.2s ease, background 0.15s ease;
   }
   .menu-btn:hover span { background: var(--white); }
@@ -94,12 +94,12 @@
     position: absolute;
     top: calc(100% + 8px);
     right: 16px;
-    background: var(--black);
-    border: 2px solid var(--gold);
+    background: var(--navy);
+    border: 2px solid var(--blue);
     border-radius: 8px;
     padding: 10px 0;
     min-width: 220px;
-    box-shadow: 0 14px 36px rgba(0,0,0,0.3);
+    box-shadow: 0 14px 36px rgba(10, 37, 64, 0.3);
     z-index: 99;
     opacity: 0;
     transform: translateY(-10px);
@@ -123,14 +123,14 @@
     transition: background 0.15s ease, color 0.15s ease;
   }
   .menu-panel a:hover {
-    background: var(--gold);
-    color: var(--black);
+    background: var(--blue);
+    color: var(--white);
     text-decoration: none;
   }
 
   /* HERO */
   .hero {
-    background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
+    background: linear-gradient(rgba(10, 37, 64, 0.82), rgba(10, 37, 64, 0.82)),
                 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80') center/cover no-repeat;
     color: var(--white);
     padding: 80px 20px 70px;
@@ -143,7 +143,7 @@
     margin-bottom: 20px;
     letter-spacing: -0.5px;
   }
-  .hero h1 .accent { color: var(--gold); }
+  .hero h1 .accent { color: var(--blue-light); }
   .hero .sub {
     font-size: clamp(16px, 2vw, 20px);
     max-width: 720px;
@@ -152,8 +152,8 @@
   }
   .hero .badge {
     display: inline-block;
-    background: var(--gold);
-    color: var(--black);
+    background: var(--blue-light);
+    color: var(--navy);
     font-weight: 700;
     padding: 6px 14px;
     border-radius: 999px;
@@ -171,8 +171,8 @@
   }
   .btn-primary {
     display: inline-block;
-    background: var(--gold);
-    color: var(--black);
+    background: var(--blue);
+    color: var(--white);
     padding: 14px 30px;
     font-size: 16px;
     font-weight: 800;
@@ -180,14 +180,14 @@
     letter-spacing: 1.5px;
     border-radius: 6px;
     text-decoration: none;
-    border: 2px solid var(--gold);
+    border: 2px solid var(--blue);
     transition: background 0.15s ease, transform 0.1s ease;
   }
   .btn-primary:hover {
-    background: var(--gold-light);
-    border-color: var(--gold-light);
+    background: var(--blue-light);
+    border-color: var(--blue-light);
     text-decoration: none;
-    color: var(--black);
+    color: var(--navy);
   }
   .btn-secondary {
     display: inline-block;
@@ -205,7 +205,7 @@
   }
   .btn-secondary:hover {
     background: var(--white);
-    color: var(--black);
+    color: var(--navy);
     text-decoration: none;
   }
 
@@ -216,14 +216,14 @@
     text-align: center;
     font-size: clamp(26px, 3.5vw, 38px);
     margin-bottom: 12px;
-    color: var(--black);
+    color: var(--navy);
   }
   .section h2::after {
     content: '';
     display: block;
     width: 60px;
     height: 3px;
-    background: var(--gold);
+    background: var(--blue);
     margin: 14px auto 0;
   }
   .section .lead {
@@ -243,28 +243,28 @@
   }
   .service-card {
     background: var(--white);
-    border: 2px solid var(--black);
-    border-top: 6px solid var(--gold);
+    border: 2px solid var(--navy);
+    border-top: 6px solid var(--blue);
     padding: 30px 26px;
     border-radius: 6px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 14px 30px rgba(10, 37, 64, 0.15);
   }
   .service-num {
     display: inline-block;
     font-family: 'Georgia', serif;
     font-size: 13px;
     letter-spacing: 4px;
-    color: var(--gold-dark);
+    color: var(--blue-dark);
     margin-bottom: 10px;
     font-weight: 700;
   }
   .service-card h3 {
     font-size: 20px;
-    color: var(--black);
+    color: var(--navy);
     margin-bottom: 10px;
     line-height: 1.3;
   }
@@ -282,20 +282,21 @@
   }
   .review-card {
     background: var(--gray);
-    border-top: 4px solid var(--gold);
+    border-top: 4px solid var(--blue);
     padding: 26px;
     border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 14px rgba(10, 37, 64, 0.08);
   }
-  .stars { color: var(--gold); font-size: 18px; margin-bottom: 8px; letter-spacing: 2px; }
+  .stars { color: var(--blue); font-size: 18px; margin-bottom: 8px; letter-spacing: 2px; }
   .review-text { font-style: italic; color: #333; margin-bottom: 14px; }
-  .reviewer { font-weight: 700; color: var(--black); font-size: 14px; }
+  .reviewer { font-weight: 700; color: var(--navy); font-size: 14px; }
   .reviewer span { color: #777; font-weight: 400; font-size: 13px; }
 
   /* HOW IT WORKS */
-  .how { background: var(--black); color: var(--white); }
+  .how { background: var(--navy); color: var(--white); }
   .how h2 { color: var(--white); }
-  .how .lead { color: #c8c8c8; }
+  .how h2::after { background: var(--blue-light); }
+  .how .lead { color: #c8d4e6; }
   .step-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -311,15 +312,15 @@
     justify-content: center;
     width: 64px;
     height: 64px;
-    background: var(--gold);
-    color: var(--black);
+    background: var(--blue-light);
+    color: var(--navy);
     border-radius: 50%;
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 16px;
   }
-  .step h3 { font-size: 20px; margin-bottom: 8px; color: var(--gold); }
-  .step p { color: #d6d6d6; font-size: 15px; }
+  .step h3 { font-size: 20px; margin-bottom: 8px; color: var(--blue-light); }
+  .step p { color: #d6dde8; font-size: 15px; }
 
   /* ABOUT */
   .about { background: var(--gray); }
@@ -334,14 +335,14 @@
 
   /* FOOTER */
   footer {
-    background: var(--black);
-    color: #c8c8c8;
+    background: var(--navy);
+    color: #c8d4e6;
     padding: 40px 20px 24px;
     text-align: center;
-    border-top: 3px solid var(--gold);
+    border-top: 3px solid var(--blue);
   }
   footer .footer-brand {
-    color: var(--gold);
+    color: var(--blue-light);
     font-family: 'Georgia', serif;
     font-size: 18px;
     letter-spacing: 1.5px;
@@ -352,14 +353,14 @@
     margin: 14px 0;
   }
   footer .footer-links a {
-    color: var(--gold);
+    color: var(--blue-light);
     margin: 0 12px;
     font-size: 14px;
   }
-  footer .footer-links a:hover { color: var(--gold-light); }
+  footer .footer-links a:hover { color: var(--white); }
   footer .copy {
     font-size: 12px;
-    color: #888;
+    color: #8aa0bd;
     margin-top: 12px;
   }
 </style>
@@ -379,16 +380,16 @@
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
-  <img src="logo.png" alt="Artist Flooring and Showers" class="logo">
-  <div class="brand-name">Artist Flooring <span>and</span> Showers</div>
+  <img src="logo.png" alt="MVP Interior Group LLC" class="logo">
+  <div class="brand-name">MVP <span>Interior</span> Group</div>
 </header>
 
 <section class="hero">
-  <h1>Save Money. <span class="accent">New Floors</span> in Florida Today.</h1>
-  <p class="sub">Premium flooring and shower installation backed by craftsmanship you can see and a price that won&rsquo;t break the bank. Free estimates, fast turnaround, no pressure.</p>
-  <span class="badge">Florida Licensed &amp; Insured</span>
+  <h1>Save Money. <span class="accent">New Floors</span> in Wisconsin Today.</h1>
+  <p class="sub">Premium flooring installation backed by craftsmanship you can see and a price that won&rsquo;t break the bank. Free estimates, fast turnaround, no pressure.</p>
+  <span class="badge">Licensed &amp; Insured</span>
   <div class="cta-row">
-    <a href="tel:+17276022233" class="btn-primary">Call (727) 602-2233</a>
+    <a href="tel:+16083043038" class="btn-primary">Call (608) 304-3038</a>
     <a href="#services" class="btn-secondary">View Our Services</a>
   </div>
 </section>
@@ -396,12 +397,12 @@
 <section class="section services" id="services">
   <div class="container">
     <h2>Our Services</h2>
-    <p class="lead">From new floors to walk-in showers, we handle every step in-house &mdash; licensed, insured, and Florida-proud.</p>
+    <p class="lead">From new floors to refinishing, we handle every step in-house &mdash; licensed, insured, and Wisconsin-proud.</p>
     <div class="service-grid">
       <div class="service-card">
         <div class="service-num">01</div>
         <h3>Luxury Vinyl Plank Flooring</h3>
-        <p>Waterproof, scratch-resistant LVP that handles Florida humidity, kids, pets, and beach sand without breaking a sweat.</p>
+        <p>Waterproof, scratch-resistant LVP that handles Wisconsin winters, kids, pets, and everyday wear without breaking a sweat.</p>
       </div>
       <div class="service-card">
         <div class="service-num">02</div>
@@ -415,18 +416,18 @@
       </div>
       <div class="service-card">
         <div class="service-num">04</div>
-        <h3>Walk-In Showers</h3>
-        <p>Modern, low-threshold walk-in showers built for safety, accessibility, and timeless style &mdash; perfect for aging-in-place upgrades.</p>
+        <h3>Laminate Flooring</h3>
+        <p>Durable, budget-friendly laminate floors with the look of real wood &mdash; installed quickly and cleanly so you can enjoy your space sooner.</p>
       </div>
       <div class="service-card">
         <div class="service-num">05</div>
-        <h3>Custom Tile Showers</h3>
-        <p>Floor-to-ceiling tile showers with niches, benches, glass enclosures, and waterproofing that&rsquo;s done right the first time.</p>
+        <h3>Carpet Installation</h3>
+        <p>Plush, stain-resistant carpet for bedrooms, basements, and family rooms &mdash; stretched and seamed by hand for a wrinkle-free finish.</p>
       </div>
       <div class="service-card">
         <div class="service-num">06</div>
-        <h3>Bathroom Remodels</h3>
-        <p>Full bathroom transformations &mdash; vanities, fixtures, lighting, flooring, and showers &mdash; handled by one trusted team start to finish.</p>
+        <h3>Floor Refinishing &amp; Repair</h3>
+        <p>Sanding, staining, and refinishing hardwood floors, plus board replacement and damage repair to bring tired floors back to life.</p>
       </div>
     </div>
   </div>
@@ -434,38 +435,38 @@
 
 <section class="section reviews" id="reviews">
   <div class="container">
-    <h2>What Florida Homeowners Are Saying</h2>
-    <p class="lead">Real reviews from real customers across the Sunshine State.</p>
+    <h2>What Wisconsin Homeowners Are Saying</h2>
+    <p class="lead">Real reviews from real customers across the state.</p>
     <div class="review-grid">
       <div class="review-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;The crew showed up on time, finished a day early, and the master bath shower looks like something out of a magazine. Worth every penny.&rdquo;</p>
-        <p class="reviewer">Marisol T. <span>&mdash; Tampa, FL</span></p>
+        <p class="review-text">&ldquo;The crew showed up on time, finished a day early, and our new hardwood floors look like something out of a magazine. Worth every penny.&rdquo;</p>
+        <p class="reviewer">Marisol T. <span>&mdash; Madison, WI</span></p>
       </div>
       <div class="review-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Got three quotes for new floors throughout the house. Artist Flooring beat them all and the LVP install is rock solid. Already recommended them to my sister.&rdquo;</p>
-        <p class="reviewer">David R. <span>&mdash; Orlando, FL</span></p>
+        <p class="review-text">&ldquo;Got three quotes for new floors throughout the house. MVP beat them all and the LVP install is rock solid. Already recommended them to my sister.&rdquo;</p>
+        <p class="reviewer">David R. <span>&mdash; Milwaukee, WI</span></p>
       </div>
       <div class="review-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">&ldquo;Honest, clean, and fast. They walked me through every option without trying to upsell me. The tile work in our kitchen is flawless.&rdquo;</p>
-        <p class="reviewer">Jennifer K. <span>&mdash; Naples, FL</span></p>
+        <p class="reviewer">Jennifer K. <span>&mdash; Green Bay, WI</span></p>
       </div>
       <div class="review-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;After the storm we needed our floors redone fast. They were the only company that actually called me back the same day. Saved our house.&rdquo;</p>
-        <p class="reviewer">Carlos M. <span>&mdash; Fort Lauderdale, FL</span></p>
+        <p class="review-text">&ldquo;After a basement flood we needed our floors redone fast. They were the only company that actually called me back the same day. Saved our house.&rdquo;</p>
+        <p class="reviewer">Carlos M. <span>&mdash; Kenosha, WI</span></p>
       </div>
       <div class="review-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Quoted me less than the big-box installers and the quality is twice as good. The walk-in shower they built for my mother-in-law is gorgeous and ADA-friendly.&rdquo;</p>
-        <p class="reviewer">Patricia L. <span>&mdash; Sarasota, FL</span></p>
+        <p class="review-text">&ldquo;Quoted me less than the big-box installers and the quality is twice as good. The refinishing job on our old hardwood is absolutely gorgeous.&rdquo;</p>
+        <p class="reviewer">Patricia L. <span>&mdash; Eau Claire, WI</span></p>
       </div>
       <div class="review-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">&ldquo;Professional from the first phone call to the final walk-through. They cleaned up daily and left the house spotless. Highly recommend.&rdquo;</p>
-        <p class="reviewer">Brian H. <span>&mdash; Jacksonville, FL</span></p>
+        <p class="reviewer">Brian H. <span>&mdash; Appleton, WI</span></p>
       </div>
     </div>
   </div>
@@ -479,7 +480,7 @@
       <div class="step">
         <div class="step-num">1</div>
         <h3>Reach Out</h3>
-        <p>Call us at (727) 602-2233 or chat with us using the icon in the bottom corner of this page.</p>
+        <p>Call us at (608) 304-3038 or chat with us using the icon in the bottom corner of this page.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -494,7 +495,7 @@
       <div class="step">
         <div class="step-num">4</div>
         <h3>Install</h3>
-        <p>Our licensed crew installs your new floors or shower with care, on schedule, and on budget.</p>
+        <p>Our licensed crew installs your new floors with care, on schedule, and on budget.</p>
       </div>
     </div>
   </div>
@@ -502,28 +503,28 @@
 
 <section class="section about" id="about">
   <div class="container">
-    <h2>About Artist Flooring and Showers</h2>
+    <h2>About MVP Interior Group</h2>
     <div class="about-content">
-      <p>Artist Flooring and Showers LLC is a Florida-based home improvement company specializing in premium flooring and bathroom shower installations. We&rsquo;re proud to serve homeowners across the state with the same level of craftsmanship, honesty, and care we&rsquo;d give to our own families.</p>
-      <p>From luxury vinyl plank and tile to walk-in showers and full bathroom remodels, every project is handled by our trained, licensed, and insured installers. We believe a beautiful home shouldn&rsquo;t come with surprise costs &mdash; just clean work, clear communication, and floors you&rsquo;ll be proud of for years to come.</p>
-      <p><strong>Licensed. Insured. Florida-Owned.</strong></p>
+      <p>MVP Interior Group LLC is a Wisconsin-based flooring company specializing in premium flooring installation and refinishing. We&rsquo;re proud to serve homeowners across the state with the same level of craftsmanship, honesty, and care we&rsquo;d give to our own families.</p>
+      <p>From luxury vinyl plank and tile to hardwood, laminate, and carpet, every project is handled by our trained, licensed, and insured installers. We believe a beautiful home shouldn&rsquo;t come with surprise costs &mdash; just clean work, clear communication, and floors you&rsquo;ll be proud of for years to come.</p>
+      <p><strong>Licensed. Insured. Wisconsin-Owned.</strong></p>
     </div>
   </div>
 </section>
 
 <footer id="contact">
-  <div class="footer-brand">Artist Flooring and Showers LLC</div>
-  <div>Serving homeowners across Florida</div>
+  <div class="footer-brand">MVP Interior Group LLC</div>
+  <div>Serving homeowners across Wisconsin</div>
   <div style="margin-top:10px; font-size:14px;">
-    Phone: <a href="tel:+17276022233" style="color:var(--gold); text-decoration:none;">+1 (727) 602-2233</a>
+    Phone: <a href="tel:+16083043038" style="color:var(--blue-light); text-decoration:none;">+1 (608) 304-3038</a>
     &nbsp;&middot;&nbsp;
-    Email: <a href="mailto:kotrocip@gmail.com" style="color:var(--gold); text-decoration:none;">kotrocip@gmail.com</a>
+    Email: <a href="mailto:jeffmvpinteriors@gmail.com" style="color:var(--blue-light); text-decoration:none;">jeffmvpinteriors@gmail.com</a>
   </div>
   <div class="footer-links">
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="terms-of-service.html">Terms of Service</a>
   </div>
-  <div class="copy">&copy; 2026 Artist Flooring and Showers LLC. All rights reserved.</div>
+  <div class="copy">&copy; 2026 MVP Interior Group LLC. All rights reserved.</div>
 </footer>
 
 <script>
